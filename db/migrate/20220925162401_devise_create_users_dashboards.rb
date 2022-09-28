@@ -5,8 +5,8 @@ class DeviseCreateUsersDashboards < ActiveRecord::Migration[7.0]
     create_table :users_dashboards do |t|
       ## Database authenticatable
       t.string :name,               null: false, default: ""
-      t.string :ktp,                null: false, default: ""
-      t.text   :address,             null: false, default: ""
+      t.string :nik,                default: ""
+      t.text   :address,            default: ""
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 

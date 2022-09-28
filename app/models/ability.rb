@@ -5,11 +5,23 @@ class Ability
 
   def initialize(user)
     # Define abilities for the user here. For example:
-    #
-    #   return unless user.present?
-    #   can :read, :all
-    #   return unless user.admin?
-    #   can :manage, :all
+    can :access, :rails_admin   # grant access to rails_admin
+    can :read, :dashboard       # grant access to the dashboard
+
+    if user.users_dashboard_role.can_manage_user_dashboard?
+      can :manage, [UsersDashboard]
+    elsif !user.users_dashboard_role.can_manage_user_dashboard?
+      can :read, [UsersDashboard]
+    end
+
+    if user.users_dashboard_role.can_manage_user_dashboard_role?
+      can :manage, [UsersDashboardRole]
+    end
+
+      # return unless user.present?
+      # can :read, :all
+      # return unless user.admin?
+      # can :manage, :all
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
