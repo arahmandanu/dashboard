@@ -1,26 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Please take note on ruby version and rails version before start it
 
 * Ruby version
- : ruby 2.7.2
+  - ruby 2.7.2
 
 * System dependencies
- : rails 7.0.4
- : postgres 12.12
+  - rails 7.0.4 
+  - postgres 12.12
 
-* Database creation
- 1. duplicate .env.development.local_template 
- 2. rename to .env.development.local
+* Database creation 
+  - duplicate .env.development.local_template 
+  - rename to .env.development.local
+  - fill the database setting
 
-* Database initialization
-  1. run rake db:create
-  2. run rake db:migrate
-  3. run rake seed:migrate
+* Database initialization (terminal as root folder)
+  - run: rake db:create
+  - run: rake db:migrate
+  - run: rake seed:migrate
 
-* Run system local
- 1. go to terminal and type
-   rails s
+* Run system local 
+  - go to terminal as root folder and type
+      - rails s
