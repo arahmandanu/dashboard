@@ -17,9 +17,9 @@ Things you may want to cover:
  2. rename to .env.development.local
 
 * Database initialization
-  : run rake db:create
-  : run rake db:migrate
-  : run rake seed:migrate
+  1. run rake db:create
+  2. run rake db:migrate
+  3. run rake seed:migrate
 
 * Run system local
  1. go to terminal and type
