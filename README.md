@@ -12,17 +12,15 @@ Things you may want to cover:
  : rails 7.0.4
  : postgres 12.12
 
-* Configuration
- :  
 * Database creation
+ 1. duplicate .env.development.local_template 
+ 2. rename to .env.development.local
 
 * Database initialization
+  : run rake db:create
+  : run rake db:migrate
+  : run rake seed:migrate
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# dashboard
+* Run system local
+ 1. go to terminal and type
+   rails s
