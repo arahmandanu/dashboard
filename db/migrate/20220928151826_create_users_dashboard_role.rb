@@ -14,6 +14,7 @@ class CreateUsersDashboardRole < ActiveRecord::Migration[7.0]
       t.timestamps
     end
 
+    add_index :users_dashboard_roles, [:users_dashboard_id], unique: true
     add_foreign_key :users_dashboard_roles, :users_dashboards, column: :users_dashboard_id
   end
 end

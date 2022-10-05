@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_28_151826) do
     t.boolean "can_export", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["users_dashboard_id"], name: "index_users_dashboard_roles_on_users_dashboard_id", unique: true
   end
 
   create_table "users_dashboards", force: :cascade do |t|
